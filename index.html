@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사진 slick</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- slick 제이쿼리 먼저 연결 -->
+  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+  <!-- 부트스트랩 js는 제이쿼리에 의존하므로 제이쿼리 먼저 연결 -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+          
+  <script>
+    $(document).ready(function(){
+      $('.list').slick({
+        infinite: true,
+        slidesToShow: 4, // 한 화면에 보여질 콘텐츠 개수
+        slidesToScroll: 4, // 움직이는 콘텐츠 갯수
+        arrows: true, // 화살표 추가 삭제
+        dots: true, // 동그란 인디케이터(글머리기호) 추가 삭제
+        autoplay: true, // 자동 플레이
+        autoplaySpeed: 2000, // autoplay 트루일때 사용. 밀리세컨즈단위임
+        speed: 300, // 넘어가는 순간(화면전환)의 속도
+        pauseOnHover: false, // 마우스 올렸을 때 일시정지
+        
+        
+        
+        // 반응형(제일중요!!!!!!!1!!!!) 960부터 밑 셋팅대로 
+        responsive: [
+          {
+            breakpoint: 960,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>10월의 우리</h1>
+      </div>
+
+      <div class="container">
+        <!-- <nav class="navbar navbar-default"> -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <!--  햄버거 메뉴 (hover했을 때 변하는 것)
+                        버튼의(.navbar-toggle collapsed) data-target 값과
+                        메뉴의(.collapse navbar-collapse) id 값 동일 -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <!-- 햄버거 -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#">
+                        사진으로 보는 우리
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav_menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="">첫째주</a>
+                        </li>
+                        <li>
+                            <a href="">둘째주</a>
+                        </li>
+                        <li class="active">
+                            <a href="">셋째주</a>
+                        </li>
+                        <li>
+                            <a href="">넷째주</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+      </div>
+
+
+      <section>
+        <div class="slider">
+          <div class="list">
+            <div><a href=""><img src="img/IMG_2333.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_2394.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_2941.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_2998.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_3582.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_3583.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_3622.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_3689.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_3956.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4014.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4025.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4221.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4346.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4412.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4509.JPG" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_4717.jpeg" alt=""></a></div>
+            <div><a href=""><img src="img/IMG_5079.jpeg" alt=""></a></div>
+          </div>
+        </div>
+      </section>
+    </header>
+  </div>
+  
+</body>
+</html>
